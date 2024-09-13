@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Créer un produit</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../components/header.js" defer></script>
+    <script src="../routes.js" defer></script>
+    <script src="../script/create.js" defer></script>
+  </head>
+
+  <body>
+    <header></header>
+    <h1>Créer un nouveau produit</h1>
+    <form id="create-product-form">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" /><br />
+
+      <label for="description">Description :</label>
+      <textarea id="description" name="description"></textarea><br />
+
+      <label for="categorie">Catégorie :</label>
+      <select id="categorie" name="categorie">
+        <option value="vetements">Vetements</option>
+        <option value="chaussures">Chaussures</option>
+        <option value="Accessoires">Accessoires</option></select
+      ><br />
+
+      <label for="prix">Prix :</label>
+      <input type="number" id="prix" name="priorite" min="1" max="1000" /><br />
+
+      <label for="extraField">Champ supplémentaire :</label>
+      <input type="text" id="extraField" name="extraField" /><br />
+
+      <button type="submit">Créer</button>
+    </form>
+
+    <div id="resultContainer">
+      <!-- Les résultats de la création seront affichés ici -->
+    </div>
+  </body>
+</html>

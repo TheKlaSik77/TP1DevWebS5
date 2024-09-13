@@ -1,0 +1,181 @@
+
+/* Styles généraux pour l'application */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+nav {
+    background-color: #343a40;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #343a40;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #dee2e6;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#pagination button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour le formulaire de création de tâche */
+form {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Styles pour les graphiques */
+.chart-container {
+    width: 90%;
+    max-width: 100%;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+
+/* Styles pour la page de recherche de tâche */
+.search-container {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 60%;
+}
+
+.search-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+#resultContainer {
+    width: 60%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}

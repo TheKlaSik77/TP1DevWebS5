@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modifier un Produit</title>
+    <link rel="stylesheet" href="../styles.css" />
+
+    <script src="../components/header.js" defer></script>
+    <script src="../routes.js" defer></script>
+    <script src="../script/update.js" defer></script>
+  </head>
+
+  <body>
+    <header></header>
+    <h1>Modifier un Produit</h1>
+    <div class="search-container">
+      <input type="text" id="taskIdToUpdate" placeholder="Entrez l'ID du produit à modifier" />
+      <button id="findTaskToUpdateButton">Rechercher</button>
+    </div>
+
+    <form id="update-task-form" style="display: none">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required /><br />
+
+      <label for="description">Description :</label>
+      <textarea id="description" name="description" required></textarea><br />
+
+      <label for="categorie">Catégorie :</label>
+      <select id="categorie" name="categorie">
+        <option value="vetements">Vetements</option>
+        <option value="chaussures">Chaussures</option>
+        <option value="Accessoires">Accessoires</option></select
+      ><br />
+
+      <label for="prix">Prix :</label>
+      <input type="number" id="prix" name="prix" min="1" max="1000" /><br />
+
+      <label for="extraField">Champ supplémentaire :</label>
+      <input type="text" id="extraField" name="extraField" /><br />
+
+      <button type="submit">Mettre à jour</button>
+    </form>
+
+    <div id="resultContainer"></div>
+  </body>
+</html>
