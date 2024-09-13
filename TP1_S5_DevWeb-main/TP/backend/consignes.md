@@ -27,6 +27,7 @@ Pour chaque endpoint, vous devez vous baser sur les définitions fournies dans l
 - **Pagination** : La pagination doit être gérée à l'aide de deux paramètres de requête : `offset` et `limit`.
   - **Exemple** : `/tasks?offset=0&limit=10` doit retourner les 10 premières tâches.
   - **Remarque** : `offset` et `limit` doivent être convertis en nombre entier avant utilisation.
+### FAIT
 
 #### b. **Trouver une tâche par ID** ()
 
