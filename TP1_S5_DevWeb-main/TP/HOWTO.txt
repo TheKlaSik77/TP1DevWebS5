@@ -1,0 +1,6 @@
+Pour installer le projet :
+1/ git clone https://github.com/TheKlaSik77/TP1DevWebS5.git
+
+Pour installer les dépendances nécessaires:
+1/ Se placer dans le repertoire backend
+2/ Executer pip install -r requirements.txt

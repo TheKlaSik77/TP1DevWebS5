@@ -12,6 +12,7 @@ Votre objectif est de développer une API avec Flask qui permette de gérer une 
 
 ## Tâches à Implémenter
 
+OK
 ### 1. **Lancer l'Application**
 
 - L'application doit se lancer sans erreur.
@@ -27,12 +28,15 @@ Pour chaque endpoint, vous devez vous baser sur les définitions fournies dans l
 - **Pagination** : La pagination doit être gérée à l'aide de deux paramètres de requête : `offset` et `limit`.
   - **Exemple** : `/tasks?offset=0&limit=10` doit retourner les 10 premières tâches.
   - **Remarque** : `offset` et `limit` doivent être convertis en nombre entier avant utilisation.
-### FAIT
+
+OK
 
 #### b. **Trouver une tâche par ID** ()
 
 - **Format de retour attendu** : Un dictionnaire contenant les propriétés de la tâche.
 - **Gestion des erreurs** : Si la tâche n'est pas trouvée, retourner une réponse avec le code HTTP approprié et un message d'erreur sous le format `{"error": "Tâche non trouvée"}`.
+
+OK
 
 #### c. **Créer une nouvelle tâche** ()
 
@@ -43,6 +47,9 @@ Pour chaque endpoint, vous devez vous baser sur les définitions fournies dans l
   - Vous pouvez générer la date de création avec datetime.now par exemple.
 - **Validation** : La validation des inputs doit être faite côté backend.
 
+
+OK
+
 #### d. **Modifier une tâche existante** ()
 
 - **Format de retour attendu** : La tâche modifiée sous forme de dictionnaire.
@@ -50,10 +57,14 @@ Pour chaque endpoint, vous devez vous baser sur les définitions fournies dans l
 - **Gestion des erreurs** :
   - Si la tâche n'est pas trouvée, retourner une réponse avec le code HTTP approprié et un message d'erreur sous le format `{"error": "Tâche non trouvée"}`.
 
+OK
+
 #### e. **Supprimer une tâche** ()
 
 - **Comportement attendu** : Supprimer la tâche si elle existe et renvoyer une réponse indiquant l'absence de contenu.
 - **Gestion des erreurs** : L'appli ne doit pas planter si on essaie de supprimer une tâche qui n'existe pas.
+
+OK
 
 #### f. **Statistiques sur les tâches** ()
 
@@ -67,6 +78,7 @@ Pour chaque endpoint, vous devez vous baser sur les définitions fournies dans l
     "Terminées": 1500
   }
   ```
+OK
 
 ### 3. **Contours du projet**
 
