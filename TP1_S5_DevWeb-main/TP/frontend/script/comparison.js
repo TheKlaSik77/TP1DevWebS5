@@ -4,7 +4,7 @@ function fetchAndRenderChart() {
   fetch(routes.comparison)
     .then(response => response.json())
     .then(data => {
-      const labels = ["En attente", "En cours", "Terminées"]
+      const labels = ["Vêtements", "Chaussures", "Accessoires"]
 
       const values = {
         [labels[0]]: data[labels[0]] ?? 0,
@@ -33,7 +33,7 @@ function fetchAndRenderChart() {
           plugins: {
             title: {
               display: true,
-              text: 'Comparaison des tâches par statut'
+              text: 'Comparaison des produits par catégorie'
             },
             legend: {
               display: false

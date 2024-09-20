@@ -1,8 +1,8 @@
 
-document.getElementById('findTaskButton').addEventListener('click', function () {
+document.getElementById('findProductButton').addEventListener('click', function () {
   const taskId = document.getElementById('taskId').value;
   if (!taskId) {
-    alert('Veuillez entrer un ID de tâche.');
+    alert('Veuillez entrer un ID de produit.');
     return;
   }
 
@@ -15,14 +15,12 @@ document.getElementById('findTaskButton').addEventListener('click', function () 
       if (res.status === 200) {
         const task = res.body;
         resultContainer.innerHTML = `
-                    <h3>Tâche trouvée :</h3>
-                    <p>ID: ${task.id_tache}</p>
+                    <h3>Produit trouvé:</h3>
+                    <p>ID: ${task.id_produit}</p>
                     <p>Nom: ${task.nom}</p>
                     <p>Description: ${task.description}</p>
-                    <p>Statut: ${task.statut}</p>
                     <p>Catégorie: ${task.categorie}</p>
-                    <p>Priorité: ${task.priorite}</p>
-                    <p>Utilisateur: ${task.utilisateur}</p>
+                    <p>Prix: ${task.prix}</p>
                     <p>Date de création: ${task.date_creation}</p>
                 `;
       } else {

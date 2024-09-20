@@ -1,10 +1,7 @@
 
-document.getElementById('create-task-form').addEventListener('submit', function (event) {
+document.getElementById('create-product-form').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  console.log('Formulaire soumis !');
-
-  // Récupère les données du formulaire
   const formData = new FormData(event.target);
   const taskData = Object.fromEntries(formData.entries());
 
@@ -34,14 +31,12 @@ document.getElementById('create-task-form').addEventListener('submit', function 
       if (res.status === 201) {
         const task = res.body;
         resultContainer.innerHTML = `
-                <h3>Tâche créée avec succès :</h3>
-                <p>ID: ${task.id_tache}</p>
+                <h3>Produit créé avec succès :</h3>
+                <p>ID: ${task.id_produit}</p>
                 <p>Nom: ${task.nom}</p>
                 <p>Description: ${task.description}</p>
-                <p>Statut: ${task.statut}</p>
                 <p>Catégorie: ${task.categorie}</p>
-                <p>Priorité: ${task.priorite}</p>
-                <p>Utilisateur: ${task.utilisateur}</p>
+                <p>Prix: ${task.prix}</p>
                 <p>Date de création: ${task.date_creation}</p>
             `;
       } else {

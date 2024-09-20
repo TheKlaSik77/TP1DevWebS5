@@ -2,7 +2,7 @@
 document.getElementById('findTaskToUpdateButton').addEventListener('click', function () {
   const taskId = document.getElementById('taskIdToUpdate').value;
   if (!taskId) {
-    alert('Veuillez entrer un ID de tâche.');
+    alert('Veuillez entrer un ID de produit.');
     return;
   }
 
@@ -16,10 +16,8 @@ document.getElementById('findTaskToUpdateButton').addEventListener('click', func
         const task = res.body;
         document.getElementById('nom').value = task.nom;
         document.getElementById('description').value = task.description;
-        document.getElementById('statut').value = task.statut;
         document.getElementById('categorie').value = task.categorie;
-        document.getElementById('priorite').value = task.priorite;
-        document.getElementById('utilisateur').value = task.utilisateur;
+        document.getElementById('prix').value = task.prix;
         document.getElementById('extraField').value = task.extraField || '';
 
         // Afficher le formulaire de mise à jour
@@ -33,8 +31,8 @@ document.getElementById('findTaskToUpdateButton').addEventListener('click', func
       }
     })
     .catch(error => {
-      console.error('Erreur lors de la récupération de la tâche:', error);
-      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la recherche de la tâche.</p>';
+      console.error('Erreur lors de la récupération du produit:', error);
+      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la recherche du produit.</p>';
     });
 });
 
@@ -56,17 +54,16 @@ document.getElementById('update-task-form').addEventListener('submit', function 
       resultContainer.innerHTML = '';
 
       if (res.status === 200) {
-        const task = res.body;
+        const produit = res.body;
         resultContainer.innerHTML = `
-                <h3>Tâche mise à jour avec succès :</h3>
-                <p>ID: ${task.id_tache}</p>
-                <p>Nom: ${task.nom}</p>
-                <p>Description: ${task.description}</p>
-                <p>Statut: ${task.statut}</p>
-                <p>Catégorie: ${task.categorie}</p>
-                <p>Priorité: ${task.priorite}</p>
-                <p>Utilisateur: ${task.utilisateur}</p>
-                <p>Date de mise à jour: ${task.updated_at}</p>
+                <h3>Produit mis à jour avec succès :</h3>
+                <p>ID: ${produit.id_produit}</p>
+                <p>Nom: ${produit.nom}</p>
+                <p>Description: ${produit.description}</p>
+                <p>Catégorie: ${produit.categorie}</p>
+                <p>Prix: ${produit.prix}</p>
+                <p>Date de création: ${produit.date_creation}</p>
+                <p>Date de mise à jour: ${produit.date_maj}</p>
             `;
       } else {
         resultContainer.innerHTML = `
@@ -77,7 +74,7 @@ document.getElementById('update-task-form').addEventListener('submit', function 
       }
     })
     .catch(error => {
-      console.error('Erreur lors de la mise à jour de la tâche:', error);
-      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la mise à jour de la tâche.</p>';
+      console.error('Erreur lors de la mise à jour du produit:', error);
+      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la mise à jour du produit.</p>';
     });
 });

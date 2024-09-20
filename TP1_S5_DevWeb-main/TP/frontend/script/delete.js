@@ -1,8 +1,8 @@
 
-document.getElementById('deleteTaskButton').addEventListener('click', function () {
+document.getElementById('deleteProductButton').addEventListener('click', function () {
   const taskId = document.getElementById('taskIdToDelete').value;
   if (!taskId) {
-    alert('Veuillez entrer un ID de tâche.');
+    alert('Veuillez entrer un ID de produit.');
     return;
   }
 
@@ -27,7 +27,7 @@ document.getElementById('deleteTaskButton').addEventListener('click', function (
       <p>Erreur: ${res.body?.erreur ?? "aucune"}</p>`;
     })
     .catch(error => {
-      console.error('Erreur lors de la suppression de la tâche:', error);
-      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la suppression de la tâche. Ca n\'est pas bon :( </p>';
+      console.error('Erreur lors de la suppression du produit:', error);
+      document.getElementById('resultContainer').innerHTML = '<p>Une erreur est survenue lors de la suppression du produit. Ca n\'est pas bon :( </p>';
     });
 });
